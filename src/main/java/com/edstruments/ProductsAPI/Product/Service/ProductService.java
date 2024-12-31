@@ -17,9 +17,10 @@ public class ProductService {
 	@Autowired
 	private ProductRepository productRepository;
 	
-	public List<Product> getAllProducts()  {
+	public List<Product> getAllProducts() throws CustomException {
 		List<Product> products = productRepository.findAll(); 
 		if(products.isEmpty()) {
+			//Product is not found
 			throw new CustomException(ExceptionCode.PRODUCT_NOT_FOUND); 
 		}
 		return products;
@@ -33,7 +34,8 @@ public class ProductService {
 		return productRepository.findById(id);
 	}
 
-	public Product updateProduct(Long id,Product product) {
+	public Product updateProduct(Long id,Product product) throws CustomException {
+		//Throws Invalid request exception if product's request parameter is invalid
 		Product currProduct = getProductById(id).orElseThrow(() -> new CustomException(ExceptionCode.INVALID_REQUEST)); 
 		currProduct.setDescription(product.getDescription());
 		currProduct.setName(product.getName());

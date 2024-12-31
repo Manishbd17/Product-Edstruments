@@ -20,7 +20,7 @@ import com.edstruments.ProductsAPI.Product.Service.ProductService;
 
 @RestController
 @RequestMapping(value = "/api/products")
-public class ProductController {
+public class ProductController   {
 	
 	@Autowired
 	private ProductService productService; 
@@ -31,9 +31,10 @@ public class ProductController {
 	}
 	
 	@GetMapping("/{id}")
-	public Optional<Product> getProductById(@PathVariable Long id) {
+	public Optional<Product> getProductById(@PathVariable Long id) throws CustomException {
 		Optional<Product> product = productService.getProductById(id);
 		if(product.isEmpty()) {
+			//Product is not found 
 			throw new CustomException(ExceptionCode.PRODUCT_NOT_FOUND);
 		}
 		return product;
