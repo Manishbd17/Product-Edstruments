@@ -33,4 +33,6 @@ To connect the product API with MySQL Database , I have launched up **MySQL as a
 **POSTMAN Collection URL** to test the APIs : 
 https://web.postman.co/workspace/680b6dc1-17bc-4bcb-a178-e41ad680c02b/documentation/33479886-2e71080a-64e3-425c-a839-2fdf84e39d7e
 
+The SQL file,Ecommerce.sql for Q2 is also attached herewith. 
+
 
