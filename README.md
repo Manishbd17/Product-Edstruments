@@ -25,6 +25,8 @@ The API throws custom exception incase of occurence of events such as Product no
 
 2. **Invalid input** : This exception is thrown when we try to update an API with invalid request parameters.
 
+For name field not to be null or empty , I have used the @NotEmpty annotation of Springboot. 
+For price field to be positive , I have used the @Positive annotation of Springboot. 
 
 To connect the product API with MySQL Database , I have launched up **MySQL as a Docker container** on port 3306. 
 
