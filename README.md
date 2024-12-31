@@ -5,11 +5,12 @@ Instructions on **how to run the application** :
 1. **Prerequisites**
 Java Development Kit (JDK): Ensure JDK is installed (preferably JDK 8 or later).
 Maven/Gradle: Depending on your build tool, Maven or Gradle should be installed and configured.
+Clone the project using git clone .
 
-2. **Build the application**
+3. **Build the application**
    Command to build : mvn clean install
 
-3. **Run the application**
+4. **Run the application**
    Command to run : mvn spring-boot:run
 
 While using an IDE, we can **right-click the main class and choose "Run"** or use the IDE's run button.
